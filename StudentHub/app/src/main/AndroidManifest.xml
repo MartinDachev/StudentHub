@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mdsolutions.dimitar.studenthub">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_var2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="6Pq3dqYs59Z3H4QDIJorebV23KSJo3ZRZMH7nn7o" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="lFYZu9BBZnaMJm4HwedmzhshoKluprQxJMeI1ZVD" />
+        <activity
+            android:name="com.mdsolutions.dimitar.studenthub.Login"
+            android:label="@string/login"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mdsolutions.dimitar.studenthub.HomeActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.example.dimitar.studenthub.HomeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mdsolutions.dimitar.studenthub.SignUp"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.example.dimitar.studenthub.SignUp" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

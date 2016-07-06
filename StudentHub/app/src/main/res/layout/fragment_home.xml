@@ -1,0 +1,241 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".HomeFragment">
+
+    <TabHost
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tabHost"
+        android:textColor="#ffffff"
+        android:layout_gravity="left|top">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#f0f0f0"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+                      <RelativeLayout
+                          android:layout_height="match_parent"
+                          android:layout_width="match_parent">
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewForum"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="50dp"
+                        android:orientation="horizontal"
+                        android:background="#f0f0f0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Lessons"
+                        android:id="@+id/textView20"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/buttonMoreLessons"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/teal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Forum"
+                        android:id="@+id/textView25"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/recyclerViewForum"
+                        android:layout_alignStart="@+id/textView20"
+                        android:layout_marginTop="10dp" />
+
+                          <android.support.v7.widget.RecyclerView
+                              android:id="@+id/recyclerViewLesson"
+                              android:layout_width="match_parent"
+                              android:layout_height="300dp"
+                              android:orientation="horizontal"
+                              android:background="#f0f0f0"
+                              android:layout_below="@+id/textView25"
+                              android:layout_alignParentStart="true"
+                              android:layout_marginTop="10dp" />
+
+                          <Button
+                              style="?android:attr/buttonStyleSmall"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="More"
+                              android:background="@android:color/transparent"
+                              android:id="@+id/buttonMoreForum"
+                              android:textColor="@color/teal"
+                              android:layout_below="@+id/recyclerViewForum"
+                              android:layout_alignParentEnd="true" />
+                      </RelativeLayout>
+            </ScrollView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="#f0f0f0">
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:scrollbars="none"
+                        android:id="@+id/horizontalScrollViewPopular"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="60dp" >
+
+                        <RelativeLayout
+                            android:layout_height="250dp"
+                            android:layout_width="match_parent">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp"
+                                android:background="@drawable/layout_bg"
+                                android:id="@+id/firstLayoutPopular">
+                                <ImageView
+                                    android:layout_height="150dp"
+                                    android:layout_width="150dp"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/login_background"
+                                    android:background="@drawable/layout_bg"
+                                    >
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="Android"
+                                    android:id="@+id/textView19Popular"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginBottom="20dp" />
+
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp"
+                                android:layout_toEndOf="@+id/firstLayoutPopular"
+                                android:background="@drawable/layout_bg"
+                                android:layout_marginStart="10dp"
+                                android:id="@+id/secondLayoutPopular">
+
+                                <ImageView
+                                    android:layout_height="150dp"
+                                    android:layout_width="150dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/help_icon"
+                                    android:background="@drawable/layout_bg"
+                                    android:id="@+id/imageView3Popular">
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="180dp"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="    Errors in Android Studio"
+                                    android:id="@+id/textView20Popular"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignStart="@+id/imageView3Popular"
+                                    android:layout_alignEnd="@+id/imageView3Popular"
+                                    android:layout_marginBottom="10dp" />
+                            </RelativeLayout>
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="250dp"
+                                android:layout_toEndOf="@+id/secondLayoutPopular"
+                                android:background="@drawable/layout_bg"
+                                android:layout_marginStart="10dp"
+                                android:id="@+id/thirdLayoutPopular">
+                                <ImageView
+                                    android:layout_width="150dp"
+                                    android:layout_height="150dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/inquiry_icon"
+                                    android:background="@drawable/layout_bg"/>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Forum"
+                        android:id="@+id/textViewForumPopular"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="22dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="More"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:id="@+id/buttonForumPopular"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/teal"
+                        android:background="#f0f0f0" />
+
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+</FrameLayout>
